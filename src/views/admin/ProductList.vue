@@ -1,5 +1,4 @@
 <template>
-  <h1>prodcut list</h1>
   <button
     type="button"
     class="btn btn-primary float-end"
