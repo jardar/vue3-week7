@@ -87,7 +87,7 @@ export default {
 
           showToast("登入成功");
           const nextUrl = this.$route.query.redirect || "/adm";
-          console.log(nextUrl);
+          // console.log(nextUrl);
           const passQuery = { ...this.$route.query };
           delete passQuery.redirect;
 

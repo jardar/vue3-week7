@@ -143,7 +143,7 @@ export default {
       this.$refs.deleteDlgRef.show();
     },
     handleEditOrCreate({ isNew, data }) {
-      console.log("article=", data);
+      // console.log("article=", data);
       // data = {
       //   title: "新增第一篇文章",
       //   description: "文章內容",
@@ -203,7 +203,6 @@ export default {
             return axios.get(hex.epAdmGetArticlesByPage(1));
           })
           .then((res) => {
-            console.log(res.data);
             this.page = res.data.pagination;
             const articles = res.data.articles;
             this.items = articles ? Object.values(articles) : [];
@@ -249,7 +248,6 @@ export default {
       axios
         .get(hex.epAdmGetArticlesById(id))
         .then((res) => {
-          console.log(res.data);
           this.selectedItem = res.data.article;
         })
         .catch((err) => {
